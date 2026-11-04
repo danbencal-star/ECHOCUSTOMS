@@ -1,0 +1,73 @@
+{
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        { "type": 12, "items": [ { "media": { "url": "https://discord-webhook.com/uploads/08292c87303495bee5d58e7db34ed552.png" } } ] },
+        { "type": 14, "spacing": 1, "divider": true },
+        {
+          "type": 10,
+          "content": "## {economy} Marketplace\n\nWelcome to the **Echo Customs Marketplace**! Here we offer a large variety of products, such as advertisements - both sponsored giveaways and paid ads - miscellaneous items such as paid channels, priority, or instant post, and custom roles and perks.\n\n> -# Once you purchase your desired item from our marketplace, claim it via a **Management Ticket**.\n\n> -# **Ready to purchase?** Browse the market below via the dropdown menu."
+        },
+        {
+          "type": 1,
+          "components": [
+            {
+              "type": 2,
+              "style": 2,
+              "label": "Donation Leaderboard",
+              "custom_id": "market_donation_leaderboard",
+              "disabled": true
+            },
+            {
+              "type": 2,
+              "style": 2,
+              "label": "Advertisement Queue",
+              "custom_id": "market_ad_queue",
+              "disabled": true
+            },
+            {
+              "type": 2,
+              "style": 2,
+              "label": "Additional Information",
+              "custom_id": "market_info"
+            }
+          ]
+        },
+        {
+          "type": 1,
+          "components": [
+            {
+              "type": 3,
+              "custom_id": "market_menu",
+              "placeholder": "View Our Market!",
+              "options": [
+                {
+                  "label": "Roles",
+                  "value": "roles",
+                  "description": "Custom roles and perks",
+                  "emoji": { "name": "28371key", "id": "1566186623396478976" }
+                },
+                {
+                  "label": "Giveaway / Paid Ad Pings",
+                  "value": "pings",
+                  "description": "Giveaway and paid advertisement pings",
+                  "emoji": { "name": "463819giveaway", "id": "1566186601640501368" }
+                },
+                {
+                  "label": "Miscellaneous",
+                  "value": "misc",
+                  "description": "Paid channels, priority and instant posts",
+                  "emoji": { "name": "81893gift", "id": "1566186580010471515" }
+                }
+              ]
+            }
+          ]
+        },
+        { "type": 14, "spacing": 1, "divider": true },
+        { "type": 12, "items": [ { "media": { "url": "https://discord-webhook.com/uploads/3002d9037ea3566a731d9aff1b8dd7ce.png" } } ] }
+      ]
+    }
+  ]
+}

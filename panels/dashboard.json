@@ -1,0 +1,71 @@
+{
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        { "type": 12, "items": [ { "media": { "url": "https://discord-webhook.com/uploads/3dcbd85c7f4c13578786752da6cdffda.png" } } ] },
+        { "type": 14, "spacing": 1, "divider": true },
+        {
+          "type": 10,
+          "content": "# Dashboard\n\nWelcome to **Echo Customs** – Your destination for quality ER:LC designs and creative services!\n\nAt **Echo Customs**, we specialise in providing high-quality designs tailored to your needs. From custom liveries and ELS to graphics, banners, clothing and more, our team is dedicated to bringing your ideas to life.\n\nWhether you're looking for a fresh look for your roleplay server or a completely custom design, we have a range of talented designers ready to help. We pride ourselves on quality, affordable pricing and reliable service.\n\n**Ready to get started? Browse our services and open a ticket today to place your order!**"
+        },
+        { "type": 14, "spacing": 1, "divider": true },
+        {
+          "type": 1,
+          "components": [
+            {
+              "type": 2,
+              "style": 2,
+              "label": "Careers (Coming Soon)",
+              "custom_id": "dashboard_careers",
+              "disabled": true,
+              "emoji": { "name": "52143trainee", "id": "1566186551161917440" }
+            },
+            {
+              "type": 2,
+              "style": 5,
+              "label": "Services",
+              "url": "https://discord.com/channels/1566143853541720086/1566213587662409749",
+              "emoji": { "name": "437466fire", "id": "1566186599580958820" }
+            },
+            {
+              "type": 2,
+              "style": 2,
+              "label": "Prices",
+              "custom_id": "dashboard_prices",
+              "emoji": { "name": "9748_robux", "id": "1566434123911012443" }
+            }
+          ]
+        },
+        {
+          "type": 1,
+          "components": [
+            {
+              "type": 3,
+              "custom_id": "dashboard_menu",
+              "placeholder": "Regulations & Terms",
+              "options": [
+                {
+                  "label": "Regulations",
+                  "value": "regulations",
+                  "description": "Discord's rules that everyone must follow",
+                  "emoji": { "name": "43519checkboxoutline", "id": "1566186547735167126" }
+                },
+                {
+                  "label": "Terms of Service",
+                  "value": "terms",
+                  "description": "The terms you agree to when ordering",
+                  "emoji": { "name": "414779lock", "id": "1566186597290999910" }
+                }
+              ]
+            }
+          ]
+        },
+        { "type": 14, "spacing": 1, "divider": true },
+        { "type": 12, "items": [ { "media": { "url": "https://discord-webhook.com/uploads/3002d9037ea3566a731d9aff1b8dd7ce.png" } } ] },
+        { "type": 14, "spacing": 1, "divider": true }
+      ]
+    }
+  ]
+}

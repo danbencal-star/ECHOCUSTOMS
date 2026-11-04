@@ -1,0 +1,20 @@
+[
+  {
+    "service": "bots",
+    "serviceName": "Discord Bots",
+    "claimerId": "1163437119293902890",
+    "userId": "1163437119293902890",
+    "price": 100,
+    "closedAt": 1793566751400,
+    "closedBy": "1163437119293902890"
+  },
+  {
+    "service": "graphics",
+    "serviceName": "Banners & Graphics",
+    "claimerId": "1163437119293902890",
+    "userId": "1163437119293902890",
+    "price": 50,
+    "closedAt": 1793567316336,
+    "closedBy": "1163437119293902890"
+  }
+]

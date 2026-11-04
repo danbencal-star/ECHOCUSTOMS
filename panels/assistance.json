@@ -1,0 +1,50 @@
+{
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        { "type": 12, "items": [ { "media": { "url": "https://discord-webhook.com/uploads/be616c5a9596d87f7df1103c9d0e09fa.png" } } ] },
+        { "type": 14, "spacing": 1, "divider": true },
+        {
+          "type": 10,
+          "content": "# Customer Assistance\n\nWelcome to the Echo Customs Assistance Centre. If you need help with an order or wish to report a member of our team, please select the appropriate option below.\n\n**{textmessage} Order Assistance**\nNeed help with an existing order? Whether it's an update, delay, issue or general enquiry, our team is here to help.\n\n**{block} Report a Staff Member**\nHad a negative experience with a staff member or have a concern regarding their conduct? Submit a report for management to review.\n\n**{github} Report a Developer / Designer**\nExperiencing an issue with a developer or designer, or have a concern regarding their work or conduct? Submit a report for review.\n\nPlease ensure you select the correct option and provide accurate details so our team can handle your request appropriately. All reports will be treated confidentially."
+        },
+        { "type": 14, "spacing": 1, "divider": true },
+        {
+          "type": 1,
+          "components": [
+            {
+              "type": 3,
+              "custom_id": "assistance_menu",
+              "placeholder": "Select an assistance option",
+              "options": [
+                {
+                  "label": "Order Assistance",
+                  "value": "order",
+                  "description": "Updates, delays, issues or general enquiries",
+                  "emoji": { "name": "521557textmessage", "id": "1566186604232446074" }
+                },
+                {
+                  "label": "Report a Staff Member",
+                  "value": "staff",
+                  "description": "Raise a concern about a staff member's conduct",
+                  "emoji": { "name": "35075block", "id": "1566186624704847952" }
+                },
+                {
+                  "label": "Report a Developer / Designer",
+                  "value": "developer",
+                  "description": "Raise a concern about a developer or designer",
+                  "emoji": { "name": "88867github", "id": "1566186581583335576" }
+                }
+              ]
+            }
+          ]
+        },
+        { "type": 14, "spacing": 1, "divider": true },
+        { "type": 12, "items": [ { "media": { "url": "https://discord-webhook.com/uploads/3002d9037ea3566a731d9aff1b8dd7ce.png" } } ] },
+        { "type": 14, "spacing": 1, "divider": true }
+      ]
+    }
+  ]
+}

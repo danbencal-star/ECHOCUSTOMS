@@ -1,0 +1,38 @@
+{
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        { "type": 12, "items": [ { "media": { "url": "https://discord-webhook.com/uploads/057632790fc42b7e6f9a95c6c7aa77a5.png" } } ] },
+        { "type": 14, "spacing": 1, "divider": true },
+        {
+          "type": 10,
+          "content": "At Echo Customs, we're committed to building strong relationships with fellow communities, supporting one another, and growing together. We value every affiliate and aim to create mutually beneficial partnerships through community events, giveaways, and shared opportunities for growth and engagement.\n\nEcho Customs does not tolerate misconduct within affiliated communities. If you encounter any inappropriate behaviour, please report it to our team so we can look into the matter."
+        },
+        { "type": 14, "spacing": 1, "divider": true },
+        {
+          "type": 1,
+          "components": [
+            {
+              "type": 3,
+              "custom_id": "affiliates_menu",
+              "placeholder": "Affiliate Options",
+              "options": [
+                {
+                  "label": "We Are Looking For Affiliates",
+                  "value": "looking",
+                  "description": "Interested in partnering with Echo Customs?",
+                  "emoji": { "name": "64211heartlogo", "id": "1566186553842208809" }
+                }
+              ]
+            }
+          ]
+        },
+        { "type": 14, "spacing": 1, "divider": true },
+        { "type": 12, "items": [ { "media": { "url": "https://discord-webhook.com/uploads/3002d9037ea3566a731d9aff1b8dd7ce.png" } } ] },
+        { "type": 14, "spacing": 1, "divider": true }
+      ]
+    }
+  ]
+}

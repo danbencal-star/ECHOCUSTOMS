@@ -1,0 +1,19 @@
+{
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        { "type": 12, "items": [ { "media": { "url": "https://discord-webhook.com/uploads/819797e35f96f1543d1e465ef00c4a07.png" } } ] },
+        { "type": 14, "spacing": 1, "divider": true },
+        {
+          "type": 10,
+          "content": "**{chevron} Designer:** {designer}\n**{chevron} Client:** {client}\n**{chevron} Service:** {service}\n**{chevron} Rating:** {rating}\n\n**{textmessage} Feedback:**\n\n> {feedback}"
+        },
+        { "type": 14, "spacing": 1, "divider": true },
+        { "type": 12, "items": [ { "media": { "url": "https://discord-webhook.com/uploads/3002d9037ea3566a731d9aff1b8dd7ce.png" } } ] },
+        { "type": 14, "spacing": 1, "divider": true }
+      ]
+    }
+  ]
+}

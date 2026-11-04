@@ -1,0 +1,80 @@
+{
+  "flags": 32768,
+  "components": [
+    {
+      "type": 17,
+      "components": [
+        { "type": 12, "items": [ { "media": { "url": "https://discord-webhook.com/uploads/0e8954ff002a380580d9eda795febe2c.png" } } ] },
+        { "type": 14, "spacing": 1, "divider": true },
+        {
+          "type": 10,
+          "content": "## Services\n\nWelcome to **Echo Customs Services**! Here you can browse and order from our range of ERLC designs and custom services. We aim to provide high-quality work tailored to your requirements.\n\nPlease ensure you read and follow our **Terms of Service** before placing an order. All orders must be **paid for before the final product is delivered**.\n\n### Products Available\n\n> Liveries  \n> ELS  \n> Clothing & Uniforms  \n> Banners & Graphics  \n> Discord Bots  \n> Server Development  \n> Custom Systems  \n> Map-Making"
+        },
+        { "type": 14, "spacing": 1, "divider": true },
+        {
+          "type": 1,
+          "components": [
+            {
+              "type": 3,
+              "custom_id": "services_menu",
+              "placeholder": "Select a service",
+              "options": [
+                {
+                  "label": "Liveries",
+                  "value": "liveries",
+                  "description": "Custom ERLC vehicle liveries",
+                  "emoji": { "name": "437466fire", "id": "1566186599580958820" }
+                },
+                {
+                  "label": "ELS",
+                  "value": "els",
+                  "description": "Emergency lighting systems",
+                  "emoji": { "name": "79938toggleonoroff", "id": "1566186578634604574" }
+                },
+                {
+                  "label": "Clothing & Uniforms",
+                  "value": "clothing",
+                  "description": "Custom clothing and uniforms",
+                  "emoji": { "name": "52143trainee", "id": "1566186551161917440" }
+                },
+                {
+                  "label": "Banners & Graphics",
+                  "value": "graphics",
+                  "description": "Banners and custom graphics",
+                  "emoji": { "name": "474566confetti", "id": "1566186602869293247" }
+                },
+                {
+                  "label": "Discord Bots",
+                  "value": "bots",
+                  "description": "Custom Discord bots",
+                  "emoji": { "name": "88867github", "id": "1566186581583335576" }
+                },
+                {
+                  "label": "Server Development",
+                  "value": "server",
+                  "description": "Full server setup and development",
+                  "emoji": { "name": "73138world", "id": "1566186560347705426" }
+                },
+                {
+                  "label": "Custom Systems",
+                  "value": "systems",
+                  "description": "Tailor-made systems for your community",
+                  "emoji": { "name": "97365unlimited", "id": "1566186582971523223" }
+                },
+                {
+                  "label": "Map-Making",
+                  "value": "maps",
+                  "description": "Custom maps",
+                  "emoji": { "name": "56721map", "id": "1566186552512614571" }
+                }
+              ]
+            }
+          ]
+        },
+        { "type": 14, "spacing": 1, "divider": true },
+        { "type": 12, "items": [ { "media": { "url": "https://discord-webhook.com/uploads/3002d9037ea3566a731d9aff1b8dd7ce.png" } } ] },
+        { "type": 14, "spacing": 1, "divider": true }
+      ]
+    }
+  ]
+}

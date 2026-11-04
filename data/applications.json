@@ -1,0 +1,167 @@
+{
+  "fab5897b": {
+    "id": "fab5897b",
+    "type": "staff",
+    "userId": "1163437119293902890",
+    "username": "hazzard_oa",
+    "guildId": "1566143853541720086",
+    "accountCreated": 1697455424856,
+    "createdAt": 1793827061294,
+    "status": "denied",
+    "answers": [
+      {
+        "question": "Why do you want to join the staff team?",
+        "answer": "ss"
+      },
+      {
+        "question": "Any previous moderation experience?",
+        "answer": "ss"
+      },
+      {
+        "question": "How would you handle a rule-breaker?",
+        "answer": "ss"
+      },
+      {
+        "question": "How active can you be each week?",
+        "answer": "ss"
+      },
+      {
+        "question": "Anything else we should know?",
+        "answer": "ss"
+      }
+    ],
+    "reviewedBy": "1163437119293902890"
+  },
+  "6eacf33e": {
+    "id": "6eacf33e",
+    "type": "developer",
+    "userId": "1163437119293902890",
+    "username": "hazzard_oa",
+    "guildId": "1566143853541720086",
+    "accountCreated": 1697455424856,
+    "createdAt": 1793827085490,
+    "status": "accepted",
+    "answers": [
+      {
+        "question": "Portfolio or GitHub link",
+        "answer": "sss"
+      },
+      {
+        "question": "Which languages do you use?",
+        "answer": "ss"
+      },
+      {
+        "question": "List your past work and experience",
+        "answer": "ss"
+      },
+      {
+        "question": "Why do you want to join as a developer?",
+        "answer": "ss"
+      },
+      {
+        "question": "How many hours can you give each week?",
+        "answer": "ss"
+      }
+    ],
+    "reviewedBy": "1163437119293902890"
+  },
+  "2a1074e2": {
+    "id": "2a1074e2",
+    "type": "staff",
+    "userId": "1452715786580787351",
+    "username": "robloxprom3v_37215",
+    "guildId": "1566143853541720086",
+    "accountCreated": 1766424833675,
+    "createdAt": 1793828302860,
+    "status": "accepted",
+    "answers": [
+      {
+        "question": "Why do you want to join the staff team?",
+        "answer": "I want to help the server out."
+      },
+      {
+        "question": "Any previous moderation experience?",
+        "answer": "I have in https://discord.gg/Hd9gdQq2K"
+      },
+      {
+        "question": "How would you handle a rule-breaker?",
+        "answer": "I would firstly if I need to then get a HR but if not then I would warn the person on how bad the rule broken was."
+      },
+      {
+        "question": "How active can you be each week?",
+        "answer": "maybe about 1-2 hours active a day but 3-5 hours a week."
+      },
+      {
+        "question": "Anything else we should know?",
+        "answer": "I am active sometimes but I got school lots."
+      }
+    ],
+    "reviewedBy": "1163437119293902890"
+  },
+  "06660096": {
+    "id": "06660096",
+    "type": "designer",
+    "userId": "1545442024914948217",
+    "username": "ozzi_boss",
+    "guildId": "1566143853541720086",
+    "accountCreated": 1788532491664,
+    "createdAt": 1793828415869,
+    "status": "accepted",
+    "answers": [
+      {
+        "question": "Portfolio link",
+        "answer": "https://sites.google.com/view/erlcliveriesoscardahlgaard/start"
+      },
+      {
+        "question": "What do you specialise in?",
+        "answer": "Liveries"
+      },
+      {
+        "question": "List your past work and experience",
+        "answer": "I have designed all the liveries for a new server calles Vermont State Roleplay."
+      },
+      {
+        "question": "Why do you want to join as a designer?",
+        "answer": "I like designing new liveries, and think it is fun to help others and create cool liveries."
+      },
+      {
+        "question": "How many hours can you give each week?",
+        "answer": "10-15 hours"
+      }
+    ],
+    "reviewedBy": "1163437119293902890"
+  },
+  "f7506c1f": {
+    "id": "f7506c1f",
+    "type": "staff",
+    "userId": "1467937426117759066",
+    "username": "gtrmk4putismyrobloxusername",
+    "guildId": "1566143853541720086",
+    "accountCreated": 1770053955345,
+    "createdAt": 1793829664417,
+    "status": "accepted",
+    "answers": [
+      {
+        "question": "Why do you want to join the staff team?",
+        "answer": "I think I'll be an good fit because I have never been an big servers staff member"
+      },
+      {
+        "question": "Any previous moderation experience?",
+        "answer": "I have owned an discord server but I deleted it because I was tired of it but I have good experiense.\nHow long for tho? Probably 2wekks or more"
+      },
+      {
+        "question": "How would you handle a rule-breaker?",
+        "answer": "I would try to climb ranks till I want to stop and I wanna be respected so like I wouldn't get into arguments"
+      },
+      {
+        "question": "How active can you be each week?",
+        "answer": "Probably 12 hours"
+      },
+      {
+        "question": "Anything else we should know?",
+        "answer": "No nothing else"
+      }
+    ],
+    "reviewedBy": "1163437119293902890"
+  }
+}
