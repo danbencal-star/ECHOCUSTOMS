@@ -8,6 +8,9 @@ const {
 const { E, applyEmojis } = require('./emojis');
 const { createTranscript, startTranscriptServer } = require('./transcripts');
 
+// safety net: one failed interaction should never crash the whole bot
+process.on('unhandledRejection', (err) => console.error('Unhandled rejection:', err));
+
 const PANELS = ['dashboard', 'affiliates', 'assistance', 'services', 'market', 'staffinfo'];
 const SEP = { type: 14, spacing: 1, divider: true };
 const BOTTOM_IMAGE = 'https://discord-webhook.com/uploads/3002d9037ea3566a731d9aff1b8dd7ce.png';
@@ -1572,10 +1575,18 @@ async function handleGiveawayCommand(i) {
 
 // the Enter Giveaway button (press again to leave)
 async function handleGiveawayEnter(i) {
+  // acknowledge the click straight away so the 3 second window can't run out
+  try {
+    await i.deferUpdate();
+  } catch (err) {
+    console.error('Giveaway enter: interaction expired before it could be acknowledged', err.code);
+    return;
+  }
+
   const all = loadGiveaways();
   const giveaway = all[i.message.id];
   if (!giveaway || giveaway.ended) {
-    return i.reply({ content: `${E.block} This giveaway has ended.`, flags: MessageFlags.Ephemeral });
+    return i.followUp({ content: `${E.block} This giveaway has ended.`, flags: MessageFlags.Ephemeral });
   }
 
   const index = giveaway.entries.indexOf(i.user.id);
@@ -1584,7 +1595,7 @@ async function handleGiveawayEnter(i) {
   else giveaway.entries.splice(index, 1);
   saveGiveaways(all);
 
-  await i.update({
+  await i.editReply({
     flags: MessageFlags.IsComponentsV2,
     allowedMentions: { parse: [] },
     components: giveawayPanel(giveaway),
@@ -1817,6 +1828,8 @@ client.on(Events.GuildMemberAdd, async (member) => {
 client.on(Events.GuildMemberRemove, () => updateStatus());
 
 // ---------- Interactions ----------
+// NOTE: every handler is called with "return await" so that errors are caught
+// by the try/catch below instead of crashing the bot.
 client.on(Events.InteractionCreate, async (i) => {
   try {
     // ----- Slash commands -----
@@ -1828,20 +1841,20 @@ client.on(Events.InteractionCreate, async (i) => {
           components = loadPanel(name);
         } catch (err) {
           console.error(err);
-          return i.reply({
+          return await i.reply({
             content: `${E.wifiproblem} Couldn't load \`panels/${name}.json\`. Check the file exists and is valid JSON.`,
             flags: MessageFlags.Ephemeral,
           });
         }
         await i.channel.send({ flags: MessageFlags.IsComponentsV2, components });
-        return i.reply({ content: `${E.tick} Sent the **${name}** panel.`, flags: MessageFlags.Ephemeral });
+        return await i.reply({ content: `${E.tick} Sent the **${name}** panel.`, flags: MessageFlags.Ephemeral });
       }
 
       if (i.commandName === 'say') {
         const message = i.options.getString('message');
         const channel = i.options.getChannel('channel') ?? i.channel;
         await channel.send({ content: message, allowedMentions: { parse: [] } });
-        return i.reply({ content: `${E.tick} Sent in ${channel}.`, flags: MessageFlags.Ephemeral });
+        return await i.reply({ content: `${E.tick} Sent in ${channel}.`, flags: MessageFlags.Ephemeral });
       }
 
       if (i.commandName === 'review') {
@@ -1860,11 +1873,11 @@ client.on(Events.InteractionCreate, async (i) => {
           allowedMentions: { parse: [] },
           components,
         });
-        return i.reply({ content: `${E.thumbsup} Thanks, your review has been posted in ${target}.`, flags: MessageFlags.Ephemeral });
+        return await i.reply({ content: `${E.thumbsup} Thanks, your review has been posted in ${target}.`, flags: MessageFlags.Ephemeral });
       }
 
       if (i.commandName === 'membercount') {
-        return i.reply({
+        return await i.reply({
           flags: MessageFlags.IsComponentsV2,
           components: [
             {
@@ -1881,27 +1894,27 @@ client.on(Events.InteractionCreate, async (i) => {
         });
       }
 
-      if (i.commandName === 'orderlogs') return handleOrderLogs(i);
-      if (i.commandName === 'giveaway') return handleGiveawayCommand(i);
+      if (i.commandName === 'orderlogs') return await handleOrderLogs(i);
+      if (i.commandName === 'giveaway') return await handleGiveawayCommand(i);
     }
 
     // ----- Giveaways -----
-    if (i.isButton() && i.customId === 'giveaway_enter') return handleGiveawayEnter(i);
+    if (i.isButton() && i.customId === 'giveaway_enter') return await handleGiveawayEnter(i);
 
     // ----- Assistance tickets -----
-    if (i.isStringSelectMenu() && i.customId === 'assistance_menu') return handleAssistanceSelect(i);
-    if (i.isModalSubmit() && i.customId.startsWith('assistance_modal:')) return handleTicketModal(i);
-    if (i.isButton() && i.customId.startsWith('ticket_')) return handleTicketButton(i);
+    if (i.isStringSelectMenu() && i.customId === 'assistance_menu') return await handleAssistanceSelect(i);
+    if (i.isModalSubmit() && i.customId.startsWith('assistance_modal:')) return await handleTicketModal(i);
+    if (i.isButton() && i.customId.startsWith('ticket_')) return await handleTicketButton(i);
 
     // ----- Service orders -----
-    if (i.isStringSelectMenu() && i.customId === 'services_menu') return handleServiceSelect(i);
-    if (i.isModalSubmit() && i.customId.startsWith('order_modal:')) return handleOrderModal(i);
-    if (i.isModalSubmit() && i.customId === 'order_price_modal') return handleOrderPriceModal(i);
-    if (i.isModalSubmit() && i.customId === 'order_link_modal') return handleOrderLinkModal(i);
-    if (i.isButton() && i.customId.startsWith('order_')) return handleOrderButton(i);
+    if (i.isStringSelectMenu() && i.customId === 'services_menu') return await handleServiceSelect(i);
+    if (i.isModalSubmit() && i.customId.startsWith('order_modal:')) return await handleOrderModal(i);
+    if (i.isModalSubmit() && i.customId === 'order_price_modal') return await handleOrderPriceModal(i);
+    if (i.isModalSubmit() && i.customId === 'order_link_modal') return await handleOrderLinkModal(i);
+    if (i.isButton() && i.customId.startsWith('order_')) return await handleOrderButton(i);
 
     // ----- Developer / designer payout panel -----
-    if (i.isButton() && i.customId.startsWith('staff_')) return handleStaffButton(i);
+    if (i.isButton() && i.customId.startsWith('staff_')) return await handleStaffButton(i);
 
     // ----- Other buttons + dropdowns -----
     // (package_ buttons are handled in packages.js)
