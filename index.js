@@ -1904,7 +1904,8 @@ client.on(Events.InteractionCreate, async (i) => {
     if (i.isButton() && i.customId.startsWith('staff_')) return handleStaffButton(i);
 
     // ----- Other buttons + dropdowns -----
-    if (i.isButton() || i.isStringSelectMenu()) {
+    // (package_ buttons are handled in packages.js)
+    if ((i.isButton() || i.isStringSelectMenu()) && !i.customId.startsWith('package_')) {
       const key = i.isStringSelectMenu() ? `${i.customId}:${i.values[0]}` : i.customId;
       const build = marketReplies[key] ?? dashboardReplies[key];
 
@@ -1923,5 +1924,8 @@ client.on(Events.InteractionCreate, async (i) => {
 
 // plugs in applications.js (/applications, /panel disable) - keep this line above client.login
 require('./applications').setup(client, commands);
+
+// plugs in packages.js (/package, /packagesold) - keep this line above client.login
+require('./packages').setup(client, commands);
 
 client.login(process.env.TOKEN);
